@@ -1,0 +1,1 @@
+ select c.login,count(o.id) as "deliveryCount" from "Couriers" as c left join "Orders" as o on c.id = o."courierId" where o."inDelivery"=true group by c.login;
